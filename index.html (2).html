@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EcoCiclo Fortaleza</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#f4f7f2;
+color:#333;
+}
+
+header{
+background:linear-gradient(135deg,#1b5e20,#43a047);
+color:white;
+padding:80px 10%;
+text-align:center;
+}
+
+header h1{
+font-size:3rem;
+margin-bottom:15px;
+}
+
+header p{
+font-size:1.2rem;
+max-width:700px;
+margin:auto;
+}
+
+.btn{
+display:inline-block;
+margin-top:25px;
+padding:12px 25px;
+background:white;
+color:#2e7d32;
+border-radius:30px;
+font-weight:600;
+text-decoration:none;
+transition:.3s;
+}
+
+.btn:hover{
+transform:translateY(-3px);
+}
+
+section{
+padding:70px 10%;
+}
+
+.section-title{
+text-align:center;
+font-size:2rem;
+margin-bottom:40px;
+color:#1b5e20;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:20px;
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+.card h3{
+margin-bottom:10px;
+color:#2e7d32;
+}
+
+.impact{
+color:#d32f2f;
+font-weight:600;
+margin-top:10px;
+}
+
+.disposal{
+color:#1565c0;
+font-weight:600;
+margin-top:10px;
+}
+
+.search-box{
+max-width:600px;
+margin:auto;
+text-align:center;
+}
+
+.search-box input{
+width:100%;
+padding:15px;
+border:none;
+border-radius:10px;
+font-size:16px;
+box-shadow:0 0 10px rgba(0,0,0,.1);
+}
+
+.result{
+margin-top:20px;
+padding:20px;
+background:white;
+border-radius:10px;
+display:none;
+box-shadow:0 0 10px rgba(0,0,0,.1);
+}
+
+.counter{
+background:#1b5e20;
+color:white;
+text-align:center;
+padding:60px 20px;
+}
+
+.counter h2{
+font-size:2rem;
+margin-bottom:20px;
+}
+
+.counter-number{
+font-size:4rem;
+font-weight:bold;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+background:white;
+border-radius:10px;
+overflow:hidden;
+box-shadow:0 0 10px rgba(0,0,0,.1);
+}
+
+th{
+background:#2e7d32;
+color:white;
+padding:15px;
+}
+
+td{
+padding:15px;
+border-bottom:1px solid #ddd;
+}
+
+.ecopontos{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.ecoponto{
+background:white;
+padding:20px;
+border-radius:12px;
+box-shadow:0 0 10px rgba(0,0,0,.08);
+}
+
+footer{
+background:#1b5e20;
+color:white;
+text-align:center;
+padding:25px;
+}
+
+@media(max-width:768px){
+
+header h1{
+font-size:2rem;
+}
+
+.counter-number{
+font-size:2.5rem;
+}
+
+}
+
+</style>
+
+</head>
+<body>
+
+<header>
+<h1>🌎 EcoCiclo Fortaleza</h1>
+
+<p>
+Seu lixo não desaparece quando você o joga fora.
+Descubra quanto tempo os resíduos permanecem no planeta
+e aprenda a descartá-los corretamente.
+</p>
+
+<a href="#materiais" class="btn">Explorar Materiais</a>
+
+</header>
+
+<section id="materiais">
+
+<h2 class="section-title">
+Tempo de Decomposição dos Resíduos
+</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>🥤 Plástico</h3>
+<p><strong>Tempo:</strong> 400 a 500 anos</p>
+
+<p class="impact">
+Impacto: gera microplásticos e polui oceanos.
+</p>
+
+<p class="disposal">
+Descarte: Lixeira Vermelha ♻️
+</p>
+</div>
+
+<div class="card">
+<h3>🍾 Vidro</h3>
+<p><strong>Tempo:</strong> mais de 4.000 anos</p>
+
+<p class="impact">
+Impacto: permanece por milênios no ambiente.
+</p>
+
+<p class="disposal">
+Descarte: Lixeira Verde ♻️
+</p>
+</div>
+
+<div class="card">
+<h3>🥫 Metal</h3>
+<p><strong>Tempo:</strong> 50 a 200 anos</p>
+
+<p class="impact">
+Impacto: contaminação do solo.
+</p>
+
+<p class="disposal">
+Descarte: Lixeira Amarela ♻️
+</p>
+</div>
+
+<div class="card">
+<h3>📄 Papel</h3>
+<p><strong>Tempo:</strong> 3 a 6 meses</p>
+
+<p class="impact">
+Impacto: aumenta o desperdício de recursos naturais.
+</p>
+
+<p class="disposal">
+Descarte: Lixeira Azul ♻️
+</p>
+</div>
+
+<div class="card">
+<h3>🛞 Pneus</h3>
+<p><strong>Tempo:</strong> mais de 600 anos</p>
+
+<p class="impact">
+Impacto: criadouros para mosquitos.
+</p>
+
+<p class="disposal">
+Descarte: Ecopontos.
+</p>
+</div>
+
+<div class="card">
+<h3>🔋 Pilhas e Baterias</h3>
+<p><strong>Tempo:</strong> 100 a 500 anos</p>
+
+<p class="impact">
+Impacto: metais pesados contaminam o ambiente.
+</p>
+
+<p class="disposal">
+Descarte: pontos especializados.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="counter">
+
+<h2>
+Uma garrafa plástica descartada hoje pode permanecer no planeta até aproximadamente:
+</h2>
+
+<div class="counter-number">
+2526
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">
+Pesquise um Material
+</h2>
+
+<div class="search-box">
+
+<input
+type="text"
+id="search"
+placeholder="Digite: plástico, vidro, metal..."
+
+>
+
+<div class="result" id="result"></div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">
+Coleta Seletiva
+</h2>
+
+<table>
+
+<tr>
+<th>Cor</th>
+<th>Material</th>
+</tr>
+
+<tr>
+<td>🔵 Azul</td>
+<td>Papel</td>
+</tr>
+
+<tr>
+<td>🔴 Vermelho</td>
+<td>Plástico</td>
+</tr>
+
+<tr>
+<td>🟢 Verde</td>
+<td>Vidro</td>
+</tr>
+
+<tr>
+<td>🟡 Amarelo</td>
+<td>Metal</td>
+</tr>
+
+<tr>
+<td>🟤 Marrom</td>
+<td>Orgânicos</td>
+</tr>
+
+<tr>
+<td>🟠 Laranja</td>
+<td>Resíduos Perigosos</td>
+</tr>
+
+</table>
+
+</section>
+
+<section>
+
+<h2 class="section-title">
+📍 Ecopontos de Fortaleza
+</h2>
+
+<div class="ecopontos">
+
+<div class="ecoponto">
+<h3>Centro</h3>
+<p>Recebe recicláveis, móveis e entulho.</p>
+</div>
+
+<div class="ecoponto">
+<h3>Cocó</h3>
+<p>Recebe plástico, vidro, papel e metal.</p>
+</div>
+
+<div class="ecoponto">
+<h3>Varjota</h3>
+<p>Recebe recicláveis e óleo de cozinha.</p>
+</div>
+
+<div class="ecoponto">
+<h3>Messejana</h3>
+<p>Recebe resíduos recicláveis.</p>
+</div>
+
+<div class="ecoponto">
+<h3>Parangaba</h3>
+<p>Recebe recicláveis e pneus.</p>
+</div>
+
+<div class="ecoponto">
+<h3>Conjunto Ceará</h3>
+<p>Recebe resíduos domésticos recicláveis.</p>
+</div>
+
+<div class="ecoponto">
+<h3>Siqueira</h3>
+<p>Recebe plástico, papel, vidro e metal.</p>
+</div>
+
+<div class="ecoponto">
+<h3>Cidade dos Funcionários</h3>
+<p>Recebe recicláveis e pequenos entulhos.</p>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">
+Curiosidades Ambientais
+</h2>
+
+<div class="cards">
+
+<div class="card">
+🌎 O vidro pode ser reciclado infinitamente.
+</div>
+
+<div class="card">
+🌎 Uma lata de alumínio reciclada retorna ao mercado em cerca de 60 dias.
+</div>
+
+<div class="card">
+🌎 Apenas uma pequena parcela do plástico produzido é reciclada.
+</div>
+
+<div class="card">
+🌎 O descarte correto reduz a poluição e gera renda para cooperativas.
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>
+EcoCiclo Fortaleza © 2026
+<br>
+Educação Ambiental e Conscientização Sustentável
+</p>
+
+</footer>
+
+<script>
+
+const materiais = {
+
+plastico:{
+tempo:"400 a 500 anos",
+impacto:"Polui oceanos e gera microplásticos.",
+descarte:"Lixeira Vermelha ou Ecoponto."
+},
+
+vidro:{
+tempo:"Mais de 4.000 anos",
+impacto:"Permanece por milênios no ambiente.",
+descarte:"Lixeira Verde."
+},
+
+metal:{
+tempo:"50 a 200 anos",
+impacto:"Pode contaminar o solo.",
+descarte:"Lixeira Amarela."
+},
+
+papel:{
+tempo:"3 a 6 meses",
+impacto:"Desperdício de recursos naturais.",
+descarte:"Lixeira Azul."
+},
+
+pilha:{
+tempo:"100 a 500 anos",
+impacto:"Liberação de metais pesados.",
+descarte:"Pontos especializados."
+}
+
+};
+
+document.getElementById("search")
+.addEventListener("keyup",function(){
+
+const valor=this.value.toLowerCase();
+
+const resultado=document.getElementById("result");
+
+if(materiais[valor]){
+
+resultado.style.display="block";
+
+resultado.innerHTML=
+`
+<h3>${valor.toUpperCase()}</h3>
+
+<p><strong>Tempo:</strong>
+${materiais[valor].tempo}
+</p>
+
+<p><strong>Impacto:</strong>
+${materiais[valor].impacto}
+</p>
+
+<p><strong>Descarte:</strong>
+${materiais[valor].descarte}
+</p>
+`;
+
+}else{
+
+resultado.style.display="none";
+
+}
+
+});
+
+</script>
+
+</body>
+</html>
